@@ -29,7 +29,7 @@ SettingsButton::SettingsButton(QWidget *parent) : QPushButton(parent) {
     animation_->setDuration(10000);
     animation_->setStartValue(0);
     animation_->setEndValue(360);
-    animation_->setLoopCount(-1);
+    animation_->setLoopCount(0);
     animation_->start();
     connect(animation_, &QPropertyAnimation::valueChanged, this, static_cast<void (QWidget::*)()>(&QWidget::update));
 
